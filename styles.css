@@ -36,11 +36,6 @@ body {
   margin: 0.7rem auto 1rem auto;
 }
 
-#navbar ul li {
-  /* padding: 0 1rem;
-  transition: all ease-in-out 0.5s; */
-}
-
 #navbar a {
   color: var(--main-link-color);
   font-size: 2rem;
@@ -160,15 +155,12 @@ body {
 }
 
 .project-tile {
-  border: 2px solid pink;
   cursor: pointer;
   margin-bottom: 5rem;
   transition: all ease-in 0.2s;
 }
 
 .project-description {
-  border: 2px solid pink;
-
   color: var(--main-link-color);
   text-align: center;
   background-color: var(--main-gray);
@@ -185,24 +177,16 @@ body {
 .item {
   opacity: 0; /* Initially set opacity to 0 */
   transition: opacity 0.3s ease-out; /* Add a transition for opacity */
+}
+
+.project-description:hover .item {
+  opacity: 1;
   color: orange;
-  margin: 0 0.5rem;
 }
 
-.project-tile:hover .item {
-  opacity: 1; /* Set opacity to 1 on hover */
-}
-
-.project-tile:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 4); /* Apply shadow on hover
-  
-  doesn't work properly 
-  */
-}
-
-.project-tile:hover .project-description {
+/* .project-tile:hover .project-description {
   background-color: grey;
-}
+} */
 
 .project-btn {
   display: inline-block;
@@ -213,13 +197,13 @@ body {
   margin-top: 3rem;
   margin-top: 3rem;
   background: var(--main-gray);
-  transition: background 0.3s ease-out;
+  transition: background 0.3s ease-out, transform 0.3s ease-out;
   color: var(--main-link-color);
 }
 
 .project-btn:hover {
   background-color: var(--main-red);
-  transform: translateX(2rem);
+  transform: translateY(0.5rem);
 }
 
 /* contact */
@@ -480,6 +464,7 @@ input[type="submit"]:hover {
     top: 34rem;
     font-size: 2.5rem;
     max-width: 25%;
+    text-align: left;
   }
 
   .welcome-image {
@@ -693,8 +678,8 @@ input[type="submit"]:hover {
   }
 
   .welcome-section-description {
-    position: absolute;
-    /* top: 70rem; */
+    margin-top: 4rem;
+
     font-size: 3.5rem;
     max-width: 20%;
   }
