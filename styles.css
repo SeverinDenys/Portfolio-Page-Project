@@ -1,10 +1,9 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   font-size: 62.5%;
   text-decoration: none;
   list-style: none;
+  /* if i try to move these styles into body - all collapse */
 }
 
 :root {
@@ -18,6 +17,8 @@
 
 body {
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* Navbar */
@@ -30,24 +31,56 @@ body {
   z-index: 1;
 }
 
-#navbar ul {
+.navbar-lists {
   display: flex;
   justify-content: flex-end;
-  margin: 0.7rem auto 1rem auto;
+  margin: 1rem auto 1rem auto;
+  text-decoration: none;
 }
 
-#navbar a {
+.navbar-links {
   color: var(--main-link-color);
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-style: italic;
   padding: 0.5rem 1rem;
   transition: all ease-in-out 0.5s;
   border-radius: 0.5rem;
+  text-decoration: none;
 }
 
 #navbar a:hover {
   color: black;
   background-color: rgb(218, 219, 113);
+}
+
+/* media queries navbar */
+/* For screens up to 767px (typically mobile devices) */
+@media only screen and (max-width: 767px) {
+  .navbar-list {
+    font-size: 2.5rem;
+    border-radius: 0.5rem;
+    padding-bottom: 0.8rem;
+    cursor: pointer;
+  }
+}
+
+/* For screens 768px and above (typically desktops) */
+@media only screen and (min-width: 768px) {
+  .navbar-lists {
+    display: flex;
+    justify-content: space-around;
+    font-size: 4.5rem;
+  }
+
+  .navbar-list {
+    border-radius: 0.5rem;
+    padding-bottom: 0.7rem;
+    cursor: pointer;
+  }
+
+  .navbar-links {
+    font-size: 2.5rem;
+  }
 }
 
 /* Welcome-section */
@@ -352,12 +385,6 @@ input[type="submit"]:hover {
 
 @media only screen and (min-width: 535px) and (max-width: 768px) {
   /* --------------navbar -----------*/
-  #navbar ul li {
-    font-size: 2.5rem;
-    border-radius: 0.5rem;
-    padding-bottom: 0.8rem;
-    cursor: pointer;
-  }
 
   /*--------- welcome section ---------*/
 
@@ -419,25 +446,6 @@ input[type="submit"]:hover {
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   /* navbar */
-  #navbar ul {
-    display: flex;
-    justify-content: space-around;
-    font-size: 4.5rem;
-  }
-
-  #navbar ul li {
-    border-radius: 0.5rem;
-    padding-bottom: 0.7rem;
-    cursor: pointer;
-  }
-
-  #navbar a {
-    font-size: 2rem;
-  }
-
-  .grid {
-    grid-gap: 3rem;
-  }
 
   /* ----welcome section ------ */
 
@@ -522,24 +530,6 @@ input[type="submit"]:hover {
 
 @media (min-width: 1024px) {
   /* ----------- navbar section --------- */
-  #navbar ul {
-    display: flex;
-    justify-content: space-around;
-    font-size: 5.5rem;
-    padding-bottom: 1rem;
-  }
-
-  #navbar ul li {
-    font-size: 2.5rem;
-    border-radius: 0.5rem;
-    padding-bottom: 0.8rem;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-
-  #navbar a {
-    font-size: 2.2rem;
-  }
 
   /* ----------- Welcome section ------------- */
   .welcome-section-container {
