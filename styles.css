@@ -154,53 +154,33 @@ body {
 /* media queries welcome section */
 /* haven't done yet */
 
-/* @media only screen and (min-width: 768px) {
-  /* .welcome-section-container {
+@media only screen and (min-width: 1024px) {
+  .welcome-section-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
-    gap: 2rem;
+    grid-template-rows: 1fr 1fr;
+    gap: 8rem;
   }
 
-  #welcome-section-title {
-    max-width: 50%;
-    font-size: 3.5rem;
-    margin-top: 1rem;
-  }
-
-  .welcome-section-description {
-    position: absolute;
-    top: 34rem;
-    font-size: 2.5rem;
-    max-width: 25%;
-    text-align: left;
-  }
-
-  .welcome-image {
-    width: 30rem;
-  } */
-
-/* .welcome-section-container {
-    display: flex;
-    text-align: left; /* Align text to the left   */
-
-/* #welcome-section-title {
-    max-width: 50%;
-    font-size: 4.5rem;
+  .welcome-section-title {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 5rem;
+    margin-top: 0; /* remove margin-top */
   }
 
   .welcome-section-description {
-    position: absolute;
-    top: 45rem;
-    font-size: 3.5rem;
-    max-width: 25%;
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 3rem;
   }
 
   .welcome-image {
+    grid-column: 2;
+    grid-row: span 2; /* span two rows */
     width: 40rem;
-    margin-left: 15rem;
-    margin-top: -5rem;
-  }   */
+  }
+}
 
 /* projects */
 #projects {
